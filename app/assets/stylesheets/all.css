@@ -1,0 +1,68 @@
+
+
+#notice {
+  color:rgb(184, 138, 230);}
+
+.ml30 {
+  margin-left: 30px;
+  }
+.mr30 {
+  margin-right: 30px;
+  }
+.mt30 {
+  margin-top: 30px;
+  }
+.mb30 {
+   margin-bottom: 30px;
+  }
+
+header {
+  font-family: "Times New Roman", Times, serif;
+  color:rgb(184, 138, 230);
+  margin-bottom :80px;
+}
+header .rounded-pill{
+  width:50px;
+  height:50px;
+  margin-bottom:0px;
+  margin-top:0px;
+  margin-left:20px;
+}
+header .form-control{
+  background-color:white;
+  width:330px;
+  height:25px;
+ 
+  margin-right :20px;
+} 
+
+footer {
+  margin:0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  background-color: black;
+  text-align: center;
+}
+footer .grid-item {
+  margin:10px;
+  margin-left:30px;
+  color:rgb(184, 138, 230);
+  font-family: "Times New Roman", Times, serif;
+  padding: 0px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.edit1 {
+  color:rgb(24, 7, 121)
+}
+.edit2 {
+  float:right;
+  color:rgb(24, 7, 121)
+}
+.warning1 {
+  color:red;
+}
+.hidden {
+  visibility: hidden;
+}

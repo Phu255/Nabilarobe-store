@@ -1,0 +1,114 @@
+body.showhomepage{
+  background-color: white;
+  color:rgb(184, 138, 230);;
+  font-family: "Times New Roman", Times, serif;;
+  line-height: 15px;
+}
+body.showhomepage h1{
+  color: black;
+  text-shadow :1px 1px rgb(184, 138, 230);
+  margin-left :30px;
+}
+body.showhomepage .special {
+  width : 500px;
+  height: 400px;
+}
+body.showhomepage .homepage-index-grid {
+    display: grid ;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    margin-left:100px;
+    margin-right:100px;
+  }
+  
+
+body.formhomepage{
+    color:rgb(184, 138, 230);;
+    font-family: "Times New Roman", Times, serif;;
+    line-height: 15px;
+  }
+
+
+body.indexhomepage h1{
+  text-shadow: 3px 3px rgb(184, 138, 230);
+  color:black;;
+  text-align: center;
+}
+body.indexhomepage h2{
+  text-shadow: 2px 2px rgb(184, 138, 230);
+  color:black;;
+  text-align: center;}
+body.indexhomepage h3{
+  text-shadow: 1px 1px rgb(184, 138, 230);
+  color:black;;}
+body.indexhomepage h4{
+  text-shadow: 1px 1px rgb(184, 138, 230);
+  color:black;;}
+body.indexhomepage{
+
+  
+  color:rgb(184, 138, 230);;
+  font-family: "Times New Roman", Times, serif;;
+  background-image: url('background.jpg') ;
+  background-size: cover;}
+
+.hinhtrangchu{
+  width:680px;
+  height:860px;
+max-width:100%;
+
+
+}
+video { 
+  margin-left :10%;
+  margin-right :10%;;
+  width: 80%;
+  max-height: 800px;;
+ }
+#tieude{
+  text-align:center;
+  text-shadow: 2px 2px black;
+  font-size:30px;
+}
+body.indexhomepage .flex1 {
+margin-left:auto;
+margin-right:auto;
+text-align:center; /* de hinh luon o giua ,khong bi nhay */
+padding-left: 15%;
+padding-right: 15%;
+}
+
+body.indexhomepage .homepage1{
+display:flex;
+  width:50%;
+  float:left;
+}
+body.indexhomepage .homepage2{
+  width:50%;
+ 
+  display:flex;
+ }
+ @media only screen and (max-width: 1200px) {
+  /* For mobile phones: */
+  body.indexhomepage .homepage1{  
+    display:flex;
+      width:100%;
+      padding-top:30px;
+      padding-bottom:30px;
+    }
+    body.indexhomepage .homepage2{  
+      display:flex;
+        width:100%;
+    }
+    .hinhtrangchu{
+
+      max-width: 100%;
+      height: auto;
+    
+    }
+}
+body.indexhomepage .carousel-control-prev{
+  width:150px;
+}
+body.indexhomepage .carousel-control-next{
+  width:150px;
+}

@@ -1,0 +1,62 @@
+
+<body class="showproduct">
+<div class="show1">
+
+
+
+   <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
+  <div id="carousel_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
+
+<!-- Indicators/dots -->
+<div class="carousel-indicators">
+  <% @product.images.each_with_index do |image, index| %>
+  <button type="hover" data-bs-target="#carousel_<%= product.id %>"  data-bs-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %> nut ">
+      <%= image_tag image ,class:'image-show d-block ' %><br>
+  </button>
+  <%end%>
+</div>
+
+<!-- carousel -->
+    <div class="carousel-inner">
+    <% @product.images.each_with_index do |image, index| %>
+        <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
+          <%= image_tag image, class: 'image-index' %><br>
+        </div>
+  <%end%>
+  </div>
+
+<!-- button -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_<%= product.id %>" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= product.id %>" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<% end %>
+</div>
+
+  <div class="show2">
+  <h1>
+  <%= @product.title %></h1>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency @product.price/20000-0.01 %>
+</p>
+<p>
+  <strong>Size:</strong>
+  <%= @product.size %>
+</p>
+</div>
+<p class="hidden">s</p>
+<br><br>
+
+
+

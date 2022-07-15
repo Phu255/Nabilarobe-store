@@ -1,0 +1,14 @@
+<body class="showhomepage">
+<h1> Edit Background / Logo / Favicon</h1>
+<br>
+
+<video autoplay muted controls loop >
+    <source src="<%= url_for(@homepage.video)%>" type="video/mp4" />
+</video>
+</div>
+<br><br><br><br><br>
+<%= link_to 'Edit', edit_homepage_path(@homepage) ,class:"btn btn-info ml30"%> |
+<%= link_to 'Back', products_path, class:"btn btn-info ml30" %>
+
+</body>
+

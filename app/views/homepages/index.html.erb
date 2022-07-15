@@ -1,0 +1,85 @@
+
+<title>Nabi La Robe</title>
+<h1> NABI LA ROBE </H1>
+<% @homepages.each do |homepage| %>
+  <% if user_signed_in? %>
+  <%= link_to 'Destroy this Video', homepage, data: { confirm: 'Are you sure?' }, :method => :delete ,class:"warning1" %>
+  <%= link_to 'Edit', edit_homepage_path(homepage), class:"edit1" %>
+  <%end%>
+  <% if homepage.video.attached? %>
+<video autoplay muted controls loop
+    poster="<%= image_tag('logonabi.jpg') %>" >
+    <source src="<%= url_for(homepage.video)%>" type="video/mp4" />
+</video>
+<%end%>
+<%end%>
+
+<body class="indexhomepage">
+
+<div class="homepage1">  
+
+      <!-- carousel --> 
+    
+<div class="flex1">
+<h2>Latest</h2>
+       <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
+      <div id="carousel1_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
+
+        <div class="carousel-inner">
+          <% @products.take(5).each_with_index do |product, index| %>
+            <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
+              <%= image_tag product.avatar, class: 'hinhtrangchu' %><br>
+              <div class="carousel-caption"><h4><%=product.title%></h4>
+              <h3><%=number_to_currency product.price/20000-0.01%></h3>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1_<%= product.id %>" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel1_<%= product.id %>" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+   <% end %>
+   </div>
+   </div>
+
+   <div class="homepage2">  
+   <!-- carousel --> 
+   
+   <div class="flex1">
+   <h2>Greastest</h2>
+    <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
+   <div id="carousel2_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
+     <div class="carousel-inner">
+       <% @products.drop(5).each_with_index do |product, index| %>
+         <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
+           <%= image_tag product.avatar, class: 'hinhtrangchu' %><br>
+           <div class="carousel-caption"><h4><%=product.title%></h4>
+           <h3><%=number_to_currency product.price/20000-0.01%></h3></div>
+          
+         </div>
+       <% end %>
+     </div>
+     <button class="carousel-control-prev" type="button" data-bs-target="#carousel2_<%= product.id %>" data-bs-slide="prev">
+       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Previous</span>
+     </button>
+     <button class="carousel-control-next" type="button" data-bs-target="#carousel2_<%= product.id %>" data-bs-slide="next">
+       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+       <span class="visually-hidden">Next</span>
+     </button>
+   </div>
+<% end %>
+</div>
+</div>
+
+
+</div>
+</body>
+<p class="hidden">s</p>
