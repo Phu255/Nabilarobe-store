@@ -57,6 +57,3 @@
 - Choose type of color of product when add it to cart 
 
 
-
-
-*** WTF ? heroku/7.60.2 linux-x64 node-v14.19.0 appear when download heroku
