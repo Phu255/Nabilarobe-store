@@ -43,6 +43,10 @@
 ***` What I need to practice more :
 
 - Upload app to Heroku (Ubuntu ,NodeJs problem but still can't fix ) 
+    + Fixing Nodejs error buy using $ heroku buildpacks:add heroku/nodejs  /$ heroku buildpacks:add heroku/ruby 
+            => the error change to " Error during git push/deployment, The same version of this code has already been built "
+    + Keep fixing it by make a new folder with a different name, pasted all files, deleted the old, and rename the new to the old one. by doing this you will have a git free directory then you can use the git init method to simply make a new repo "
+            => the error change to "Error" ,still can't push it 
 
 - Learn very clearly about Associations (Rails)
 
