@@ -53,15 +53,19 @@
       <%= link_to "Admin Log in", new_user_session_path, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
       </li>
       <% end %>
-
-     
       </ul>
+      <div >
+      <%= search_form_for @q do |find| %>
+        
+        <input id="find_submit" type="image" <%= image_tag "search.jpg"  ,style:"width:35px;height:35px" ,class:"rounded-pill me-2" %> 
+      <%= find.search_field :title_or_price_or_description_cont , placeholder:"What are you looking for ? (name,color,...)" ,class:"form-control mt-1"%>
+  
+        
+      <% end %>
+      </div>
+    
      
-      <button class="btn" type="submit">
-        <img src="https://thumbs.dreamstime.com/b/home-search-icon-element-minimalistic-icons-mobile-concept-web-apps-neon-can-be-used-dark-gradient-background-mo-119396547.jpg"  style="width:35px;height:35px;margin-bottom:0px;margin-top:0px;" class="rounded-pill">
-      </button>
-      <input class="form-control" type="text" placeholder="What are you looking for ? (name,color,...)">
-      
+      </nav>
 </header>
 
 <div>

@@ -4,7 +4,9 @@ class HomepagesController < ApplicationController
   # GET /homepages or /homepages.json
   def index
     @homepages = Homepage.all
-    @products = Product.all
+    @q = Product.ransack(params[:q])
+    @products = @q.result(distinct: true)
+  
   end
 
   # GET /homepages/1 or /homepages/1.json

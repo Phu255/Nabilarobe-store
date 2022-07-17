@@ -66,3 +66,6 @@ footer .grid-item {
 .hidden {
   visibility: hidden;
 }
+.search {
+  display :inline;
+}
