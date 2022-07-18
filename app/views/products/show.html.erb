@@ -1,6 +1,7 @@
 <%= render "layouts/header" %>
 <body class="showproduct">
 <div class="show1">
+  <div class="flex2"
    <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
   <div id="carousel_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
 
@@ -12,7 +13,6 @@
   </button>
   <%end%>
 </div>
-
 <!-- carousel -->
     <div class="carousel-inner">
     <% @product.images.each_with_index do |image, index| %>
@@ -34,6 +34,7 @@
   </div>
 <% end %>
 </div>
+</div>
 
   <div class="show2">
   <h1>
@@ -42,7 +43,7 @@
   <%= @product.title %></h1>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Color:</strong>
   <%= @product.description %>
 </p>
 <p>
@@ -56,6 +57,7 @@
 </div>
 
 <br><br>
-
+<p class="hidden">s</p>
+<%= render "layouts/footer" %>
 
 

@@ -14,7 +14,7 @@
 
 - Connect all pages with path 
 
-- Make basic Front End all pages 
+- Make basic Front End all pages, navbar ,header ,footer
 
 - Create a cart for use to buy product
 
@@ -36,7 +36,7 @@
 
 - Product#Show using Carousel got problem with Flickity error ,found another way (Using take method and ruby params to take JS code work normally)
 
-- Zoom page but all the item not moving (CSS : flex method ,@Media ,margin - padding :auto ,max-height(width) )
+- Zoom page but all the products, item not moving (CSS : flex method ,@Media ,margin - padding :auto ,max-height(width) )
 
 - Add CSS box-shadow ,opacity ,transform: translateY(-5px) to Product#index ,edit hover ,placeholder ,..
 
@@ -54,9 +54,7 @@
 
 - Choose images from Product and mark them with many types to make it appear in the Homepage (Rails)
 
-- Click the item in the Hompage ,it link to Product#show that item
-
-- Edit navbar ,product item when zoom
+- Click the item in the Homepage ,it link to Product#show that item
 
 - Online payment
 
@@ -64,5 +62,5 @@
 
 - Pagination
 
-- Add image to products
+- Add image to products when edit
 

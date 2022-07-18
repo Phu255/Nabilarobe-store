@@ -16,10 +16,11 @@
    margin-bottom: 30px;
   }
 
+
 header {
   font-family: "Times New Roman", Times, serif;
   color:rgb(184, 138, 230);
-  margin-bottom :80px;
+  padding-bottom :80px;
 }
 header .rounded-pill{
   width:50px;
@@ -39,7 +40,7 @@ header .form-control{
 footer {
   margin:0px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   background-color: black;
   text-align: center;
 }
@@ -71,15 +72,18 @@ footer .grid-item {
  height:35px;
 
  margin-right:20px;
+
  float: right;
 }
 .search2 {
-  margin-left:40px;
-padding-left:15px;
+
+ 
+
 margin-top:13px;
 }
 #find {
   color:rgb(184, 138, 230);
+  text-shadow :0.5px 0.5px black;
   background-image: url('background2.jpg') ;
   background-size: cover;
 

@@ -5,11 +5,9 @@ body.indexproduct{
   font-family: "Times New Roman", Times, serif;;
   line-height: 13px;
 }
-
-
 body.indexproduct h1{
   color:black;
-  text-shadow :2px 2px rgb(184, 138, 230);
+  text-shadow :2px 2px rgb(184, 138, 230) ;
   margin-left :0px;
   text-align:center;
   padding-top:12px;
@@ -18,16 +16,16 @@ body.indexproduct .product-index-grid {
   
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  margin-left:300px;
-  margin-right:300px;
-  padding-left:30px;
-  padding-right:30px;
+  margin-left:15%;
+  margin-right:15%;
+  padding-left:3%;
+  padding-right:3%;
 
 }
 body.indexproduct .product{
   padding-top:18px;
   padding-left:12px;
-  padding-right:20px;}
+  padding-right:22px;}
 body.indexproduct .product:hover {
 
 }
@@ -58,23 +56,37 @@ body.indexproduct .image-index {
 body.indexproduct .image-index:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 opacity:0.8;
-transform: translateY(-5px);
+transform: translateY(5px);
 }
-
+@media only screen and (max-width: 1200px) {
+  /* For mobile phones: */
+  body.indexproduct .product-index-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin-left:10%;
+    margin-right:10%;
+    padding-left:1%;
+    padding-right:1%;
+  }
+  }
 
 body.showproduct{
   color:rgb(184, 138, 230);; 
   font-family: "Times New Roman", Times, serif;;
   background-image: url('background.jpg') ;
   background-size: cover;
+  
 }
+
 body.showproduct h1{
   color:black;
   text-shadow :2px 2px rgb(184, 138, 230);
   padding-top:50px;
 }
 body.showproduct .image-show {
-width:210%;}
+
+width:210%;
+height:80px;} /* hinh nho */
 body.showproduct .image-show:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   border: 1px solid black;
@@ -84,40 +96,52 @@ body.showproduct .carousel-indicators {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
   padding-top:20px;
-  margin-top:20px;
-  margin-left:197px;
+  margin-left:10px;
 }
 body.showproduct .image-index {
   margin-top:15px;
   margin-bottom:30px;
   padding-bottom:10px;
-  margin-left:200px;
-  margin-right:850px;
-  width : 630px;
-  height : 820px;
+  width:650px;
+  height:820px;
+max-width:100%; /* zoom khong bi be hinh */
 }
 body.showproduct .carousel-control-prev{
- 
-  margin-left:200px;
-  margin-top:15px;
   width:150px;
-  height: 810px;
 }
 body.showproduct .carousel-control-next{
- 
-  margin-top:15px;
-  margin-right:86px;
   width:150px;
-  height: 810px;
 }
+body.showproduct .flex2 {/* phai co de padding-left :15% = 15% cua trang ,khong phai 15% cua homepage1*/
+
+  text-align:center; /* de hinh luon o giua ,khong bi nhay */
+  padding-left: 10%;
+  padding-right: 10%;
+  }
 body.showproduct .show1{
   width:50%;
   float:left;
+  padding-bottom: 50px;;
+  padding-left:200px;;
+ 
 }
 body.showproduct .show2{
   width:50%;
-  float:right;
-  height:900px;
+  float:left;
+ height:900px;
+}
+@media only screen and (max-width: 1242px) {
+  /* For mobile phones: */
+  body.showproduct .image-index {
+
+    
+    height: 600px;
+  max-width:100%; /* zoom khong bi be hinh */
+  }
+
+  body.showproduct .show2{
+    height:700px;
+  }
 }
 
 body.formproduct{
