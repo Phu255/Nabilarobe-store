@@ -1,31 +1,4 @@
-body.showhomepage{
-  background-color: white;
-  color:rgb(184, 138, 230);;
-  font-family: "Times New Roman", Times, serif;;
-  line-height: 15px;
-}
-body.showhomepage h1{
-  color: black;
-  text-shadow :1px 1px rgb(184, 138, 230);
-  margin-left :30px;
-}
-body.showhomepage .special {
-  width : 500px;
-  height: 400px;
-}
-body.showhomepage .homepage-index-grid {
-    display: grid ;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    margin-left:100px;
-    margin-right:100px;
-  }
-  
 
-body.formhomepage{
-    color:rgb(184, 138, 230);;
-    font-family: "Times New Roman", Times, serif;;
-    line-height: 15px;
-  }
 
 
 body.indexhomepage h1{
@@ -44,8 +17,6 @@ body.indexhomepage h4{
   text-shadow: 1px 1px rgb(184, 138, 230);
   color:black;;}
 body.indexhomepage{
-
-  
   color:rgb(184, 138, 230);;
   font-family: "Times New Roman", Times, serif;;
   background-image: url('background.jpg') ;

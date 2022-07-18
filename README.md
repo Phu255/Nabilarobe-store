@@ -24,7 +24,7 @@
 
 - Make products in line with CSS grid-template-columns: repeat(auto-fill)
 
-- Upload file to Github for saving
+- Upload file to Github for saving codes
 
 - Carousel with Rails by Flickity 
 
@@ -38,7 +38,9 @@
 
 - Zoom page but all the item not moving (CSS : flex method ,@Media ,margin - padding :auto ,max-height(width) )
 
-- Add CSS box-shadow ,opacity ,transform: translateY(-5px) to Product#index 
+- Add CSS box-shadow ,opacity ,transform: translateY(-5px) to Product#index ,edit hover ,placeholder ,..
+
+- Sort item 
 
 ***` What I need to practice more :
 
@@ -52,7 +54,7 @@
 
 - Choose images from Product and mark them with many types to make it appear in the Homepage (Rails)
 
-- Sort item (Rails)
+- Click the item in the Hompage ,it link to Product#show that item
 
 - Edit navbar ,product item when zoom
 
@@ -60,4 +62,7 @@
 
 - Choose type of color of product when add it to cart 
 
+- Pagination
+
+- Add image to products
 

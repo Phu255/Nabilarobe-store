@@ -2,7 +2,12 @@
 <title>Nabi La Robe</title>
 
 
+     
+<%= render "layouts/header" %>
 
+
+
+<body class="indexhomepage">
 <h1>NABI LA ROBE</h1>
 <% @homepages.each do |homepage| %>
   <% if user_signed_in? %>
@@ -16,9 +21,6 @@
 </video>
 <%end%>
 <%end%>
-
-<body class="indexhomepage">
-
 <div class="homepage1">  
 
       <!-- carousel --> 
@@ -86,3 +88,4 @@
 </div>
 </body>
 <p class="hidden">s</p>
+<%= render "layouts/footer" %>

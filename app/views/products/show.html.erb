@@ -1,9 +1,6 @@
-
+<%= render "layouts/header" %>
 <body class="showproduct">
 <div class="show1">
-
-
-
    <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
   <div id="carousel_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
 
@@ -40,6 +37,8 @@
 
   <div class="show2">
   <h1>
+
+
   <%= @product.title %></h1>
 
 <p>
@@ -55,7 +54,7 @@
   <%= @product.size %>
 </p>
 </div>
-<p class="hidden">s</p>
+
 <br><br>
 
 

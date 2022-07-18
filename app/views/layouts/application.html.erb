@@ -17,70 +17,9 @@
 
 </head>
 
-<header>
-  <nav class="navbar navbar-expand-sm bg-black fixed-top "> 
-  
-  <%= link_to image_tag('logonabi.jpg',:class => 'rounded-pill'),root_path,class:"navbar-brand" %>
-  
-  
-      <ul class="navbar-nav me-auto ">
-        <li class="nav-item" >
-        <%= link_to "All Dresses", products_path, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" style="color:rgb(184, 138, 230)" data-bs-toggle="dropdown">Find Us On</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://www.instagram.com/nabi.larobe/"><i class="fa-brands fa-instagram-square"></i> Instagram</a></li>
-          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://www.facebook.com/nabilarobee"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://shopee.vn/nabilarobe"><i class="fa-brands fa-shopify"></i> Shopee</a></li>
-          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://www.tiktok.com/@nabilarobe"> <i class="fa-brands fa-tiktok"></i> Tiktok</a></li>
-          </ul>
-      </li>
-    
-      <% if user_signed_in? %>
-   
-      <li class="nav-item" >
-      <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
-      </li>
-      <li class="nav-item" >
-      <%= link_to "Sign Out",  destroy_user_session_path,method: :delete, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
-      </li>
-      <li class="nav-item" >
-      <%= link_to 'New Product', new_product_path , class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
-      </li>
-      <% else %>
-      <li class="nav-item" >
-      <%= link_to "Admin Log in", new_user_session_path, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
-      </li>
-      <% end %>
-      </ul>
-      <div >
-      <%= search_form_for @q do |find| %>
-        
-        <input id="find_submit" type="image" <%= image_tag "search.jpg"  ,style:"width:35px;height:35px" ,class:"rounded-pill me-2" %> 
-      <%= find.search_field :title_or_price_or_description_cont , placeholder:"What are you looking for ? (name,color,...)" ,class:"form-control mt-1"%>
-  
-        
-      <% end %>
-      </div>
-    
-     
-      </nav>
-</header>
 
 <div>
 
     <%= yield %>
 
-</div>
-<div>
-<footer class="grid-container">
-<div class="grid-item">About Nabi</div>
-<div class="grid-item">Contact Us</div>
-<div class="grid-item">Order Status</div>  
-<div class="grid-item"><i class="fa-solid fa-location-dot"></i>Find Our Store</div>
-<div class="grid-item">Send Feedback</div>  
-<div class="grid-item">Legal</div>
-<div class="grid-item" style="font-size:15px;font-family:initial" >&#9743; 0934114954-VietNam 2021-2022 Nabi la robe® - All rights reserved. </div>
-</div>
 </div>

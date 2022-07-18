@@ -1,0 +1,60 @@
+<header>
+  <nav class="navbar navbar-expand-sm bg-black fixed-top "> 
+  
+  <%= link_to image_tag('logonabi.jpg',:class => 'rounded-pill'),root_path,class:"navbar-brand" %>
+  
+  
+      <ul class="navbar-nav me-auto ">
+        <li class="nav-item" >
+        <%= link_to "All Dresses", products_path, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" style="color:rgb(184, 138, 230)" data-bs-toggle="dropdown">Find Us On</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://www.instagram.com/nabi.larobe/"><i class="fa-brands fa-instagram-square"></i> Instagram</a></li>
+          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://www.facebook.com/nabilarobee"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://shopee.vn/nabilarobe"><i class="fa-brands fa-shopify"></i> Shopee</a></li>
+          <li><a class="dropdown-item" style="color:rgb(184, 138, 230);" target="_blank" href="https://www.tiktok.com/@nabilarobe"> <i class="fa-brands fa-tiktok"></i> Tiktok</a></li>
+          </ul>
+      </li>
+    
+      <% if user_signed_in? %>
+   
+      <li class="nav-item" >
+      <%= link_to "Edit Profile", edit_user_registration_path, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
+      </li>
+      <li class="nav-item" >
+      <%= link_to "Sign Out",  destroy_user_session_path,method: :delete, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
+      </li>
+      <li class="nav-item" >
+      <%= link_to 'New Product', new_product_path , class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
+      </li>
+      <% else %>
+      <li class="nav-item" >
+      <%= link_to "Admin Log in", new_user_session_path, class:"nav-link" ,style:"color:rgb(184, 138, 230)" %>
+      </li>
+      <% end %>
+      </ul>
+    
+      
+      <%= search_form_for @q do |find| %>
+      
+    
+        <input id="find_submit" type="image" <%= image_tag "search.jpg"  ,class:"search rounded-pill" %>
+      <%= find.search_field :title_or_price_or_description_cont , placeholder:"What are you looking for ? (name,color,...)",list:"datalistOptions",class:"search2 form-control",id:"find"%> 
+    
+      <datalist id="datalistOptions">
+    
+      
+      <option value="Maris">
+      <option value="Sayo">
+      <option value="Slin">
+      <option value="Liti">
+    </datalist>
+
+      <% end %>
+  
+    
+     
+      </nav>
+</header>
