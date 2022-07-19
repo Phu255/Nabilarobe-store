@@ -38,12 +38,10 @@
 
   <div class="show2">
   <h1>
-
-
   <%= @product.title %></h1>
 
 <p>
-  <strong>Color:</strong>
+  <strong>Description:</strong>
   <%= @product.description %>
 </p>
 <p>
@@ -53,6 +51,14 @@
 <p>
   <strong>Size:</strong>
   <%= @product.size %>
+</p>
+<p>
+  <strong>Color:</strong>
+  <%= @product.color1 %> / <%= @product.color2 %> / <%= @product.color3 %> / <%= @product.color4 %> / <%= @product.color5 %>
+</p>
+<p>
+  <strong>Classify:</strong>
+  <%= @product.classify %>
 </p>
 </div>
 

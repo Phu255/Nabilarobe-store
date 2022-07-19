@@ -16,7 +16,9 @@
     <% @products.each do |product| %>
       <div class="product">
       <% if user_signed_in? %>
+     
     <%= link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, :method => :delete ,class:"warning1" %>
+    <span class="classify">(<%= product.classify  %>)</span>
     <%= link_to 'Edit', edit_product_path(product), class:"edit2" %><br/>
     <%end%>
     <p>
@@ -24,13 +26,18 @@
     <%= link_to image_tag(product.avatar,:class => 'image-index'),product %>
     <%end%>
     <p class="price"><%= number_to_currency product.price/20000-0.01 %>
-    <p class="title"><%= product.title %>
-    <p class="description"><%= product.description%>
-    <p class="size"><%= product.size %>
+    <p class="title"><%= product.title %></p>
+
+    <p class="color"><%= product.color1%>/<%= product.color2%>/<%= product.color3%>
+    <p class="size"><%= product.size %>   
     </div>
     <% end %>
 </div>
-
+<br>
+<% @sanpham.where('price >350000').find_each do |a| %>
+  <%= a.title %>
+  <% end %>
+ <br>
 
 </body>
 

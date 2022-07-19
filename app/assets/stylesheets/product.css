@@ -38,11 +38,15 @@ color : black;
 text-shadow :1px 1px rgb(184, 138, 230);
 font-size: 20px;
 }
-body.indexproduct p.description {
+body.indexproduct p.color {
   font-size:15px;
 }
 body.indexproduct p.size{
   font-size:smaller;
+}
+body.indexproduct span.classify{
+
+  color:rgb(0, 0, 0);;
 }
 body.indexproduct .warning1:hover {
   color:black;}

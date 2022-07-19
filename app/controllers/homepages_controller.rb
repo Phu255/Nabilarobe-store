@@ -6,7 +6,10 @@ class HomepagesController < ApplicationController
     @homepages = Homepage.all
     @q = Product.ransack(params[:q])
     @products = @q.result(distinct: true)
-  
+    @latest = Product.where('classify = "Latest"').find_each
+    @greatest = Product.where('classify = "Greatest"').find_each
+      
+     
   end
 
   # GET /homepages/1 or /homepages/1.json

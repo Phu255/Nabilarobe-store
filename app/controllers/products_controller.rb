@@ -5,9 +5,9 @@ class ProductsController < ApplicationController
   def index
     @q = Product.ransack(params[:q])
     @products = @q.result(distinct: true)
-  
+   @sanpham = Product.all
 
-    @homepages = Homepage.all
+  
   end
 
   # GET /products/1 or /products/1.json
@@ -75,6 +75,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :description, :price, :size, :avatar, :video, images:[])
+      params.require(:product).permit(:title, :description, :price, :size, :avatar, :color1, :color2, :color3, :color4, :color5,:classify, images:[])
     end
 end

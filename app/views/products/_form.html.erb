@@ -25,6 +25,42 @@
   </div>
 
   <div class="field">
+  <%= form.label :color1 %>
+  <p>
+  <%= form.text_field :color1 %>
+</div>
+
+<div class="field">
+<%= form.label :color2 %>
+<p>
+<%= form.text_field :color2 %>
+</div>
+
+<div class="field">
+<%= form.label :color3 %>
+<p>
+<%= form.text_field :color3 %>
+</div>
+
+<div class="field">
+<%= form.label :color4 %>
+<p>
+<%= form.text_field :color4 %>
+</div>
+
+<div class="field">
+<%= form.label :color5 %>
+<p>
+<%= form.text_field :color5 %>
+</div>
+
+<div class="field">
+<%= form.label :classify %>
+<p>
+<%= form.select :classify, ['Greatest', 'Latest', 'None'], selected: 'None' %>
+</div>
+
+  <div class="field">
     <%= form.label :price %>
     <p>
     <%= form.text_field :price %>

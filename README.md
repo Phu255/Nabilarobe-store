@@ -40,7 +40,9 @@
 
 - Add CSS box-shadow ,opacity ,transform: translateY(-5px) to Product#index ,edit hover ,placeholder ,..
 
-- Sort item 
+- Sort item ( Ransack)
+
+- - Choose images from Product and mark them with many types to make it appear in the Homepage (Active Record Query Interface)
 
 ***` What I need to practice more :
 
@@ -52,8 +54,6 @@
 
 - Learn very clearly about Associations (Rails)
 
-- Choose images from Product and mark them with many types to make it appear in the Homepage (Rails)
-
 - Click the item in the Homepage ,it link to Product#show that item
 
 - Online payment
@@ -62,5 +62,8 @@
 
 - Pagination
 
-- Add image to products when edit
+- More option :add image to products when edit
 
+- Filter Product by highest or lowest price 
+
+- Create a button that click it and only latest ,greatest products appear

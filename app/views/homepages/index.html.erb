@@ -24,14 +24,14 @@
 <div class="homepage1">  
 
       <!-- carousel --> 
-    
+
 <div class="flex1">
 <h2>Latest</h2>
        <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
       <div id="carousel1_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
 
         <div class="carousel-inner">
-          <% @products.take(5).each_with_index do |product, index| %>
+          <% @latest.each_with_index do |product, index| %>
             <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
               <%= image_tag product.avatar, class: 'hinhtrangchu' %><br>
               <div class="carousel-caption"><h4><%=product.title%></h4>
@@ -62,7 +62,7 @@
     <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
    <div id="carousel2_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
      <div class="carousel-inner">
-       <% @products.drop(5).each_with_index do |product, index| %>
+       <% @greatest.each_with_index do |product, index| %>
          <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
            <%= image_tag product.avatar, class: 'hinhtrangchu' %><br>
            <div class="carousel-caption"><h4><%=product.title%></h4>
