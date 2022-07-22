@@ -1,0 +1,60 @@
+
+
+<h2> Filter </h2>
+   <ul>
+    <li><h3> Classify </h3></li>
+    <%= search_form_for @q do |find| %>
+    <button id="find_submit" type="submit" class="btn btn-default" >
+       <h4>Latest</h4>
+        </button>
+      <%= find.hidden_field :classify_cont, value: "Latest" ,class:"search2 form-control",id:"find"%> 
+     <%end%>
+
+     <%= search_form_for @q do |find| %>
+      <button id="find_submit" type="submit" class="btn btn-default" >
+      <h4>Greatest</h4>
+       </button>
+     <%= find.hidden_field :classify_cont, value: "Greatest" ,class:"search2 form-control",id:"find"%> 
+      <% end %>
+    
+      <li><h3> Size </h3></li>
+      <%= search_form_for @q do |find| %>
+        <button id="find_submit" type="submit" class="btn btn-default" >
+        <h4>Freesize</h4>
+        </button>
+      <%= find.hidden_field :size_cont, value: "Freesize" ,class:"search2 form-control",id:"find"%> 
+      <% end %>
+
+      <%= search_form_for @q do |find| %>
+        <button id="find_submit" type="submit" class="btn btn-default" >
+        <h4>Others</h4>
+        </button>
+      <%= find.hidden_field :size_not_cont, value: "Freesize" ,class:"search2 form-control",id:"find"%> 
+      <% end %>
+
+      <li><h3> Color </h3></li>
+      <%= search_form_for @q do |find| %>
+        <button  id="find_submit" type="submit" class="btn btn-default" >
+        <svg width="30" height="30">
+  <circle cx="15" cy="15" r="15"  stroke-width="15" fill="pink" />
+</svg>
+        </button>
+      <%= find.hidden_field :color1_or_color2_or_color3_cont, value: "Pink" ,class:"search2 form-control",id:"find"%> 
+      <% end %>
+
+      <%= search_form_for @q do |find| %>
+        <button  id="find_submit" type="submit" class="btn btn-default" >
+        <svg width="30" height="30">
+  <circle cx="15" cy="15" r="15"  stroke-width="15" fill="white" />
+</svg>
+        </button>
+      <%= find.hidden_field :color1_or_color2_or_color3_cont, value: "White" ,class:"search2 form-control",id:"find"%> 
+      <% end %>
+
+      </ul>
+<br>
+<h2> Sort </h2>
+<h4><%= sort_link(@q, :size , "Sort by Name",class:"link1") %></h4>
+<h4><%= sort_link(@q, :price ,"Sorty by Price",class:"link1")%></h4>
+<br>
+

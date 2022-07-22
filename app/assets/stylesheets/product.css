@@ -3,7 +3,7 @@ body.indexproduct{
   background-size: cover;
   color:rgb(184, 138, 230);;
   font-family: "Times New Roman", Times, serif;;
-  line-height: 13px;
+  line-height: 15px;
 }
 body.indexproduct h1{
   color:black;
@@ -12,23 +12,65 @@ body.indexproduct h1{
   text-align:center;
   padding-top:12px;
 }
+body.indexproduct h2{
+  color:black;
+  text-shadow :2px 2px rgb(184, 138, 230) ;
+  margin-left :0px;
+}
+body.indexproduct h3{
+  color:black;
+  text-shadow :2px 2px rgb(184, 138, 230) ;
+  margin-left :0px;
+}
+body.indexproduct .normal{border: 1px rgb(94, 88, 2) dotted;}
+body.indexproduct .normal:after{  /* giu footer luon o duoi day */
+    content: "";
+    display: table;
+    clear: both;}
+body.indexproduct circle{
+  cx="15"; cy="15"; r="15" ; stroke-width="15";
+}
+body.indexproduct .filter {
+  width:15%;
+  float:left;
+  margin-right:5%;  
+  padding-left :3%;
+  border: 1px orange dotted;
+}
 body.indexproduct .product-index-grid {
-  
+  width:80%;
+  float:right;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  margin-left:15%;
-  margin-right:15%;
-  padding-left:3%;
-  padding-right:3%;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  border: 1px rgb(255, 6, 6) dotted;
+  padding-right:10%;  
 
 }
 body.indexproduct .product{
-  padding-top:18px;
-  padding-left:12px;
-  padding-right:22px;}
-body.indexproduct .product:hover {
+
+ padding-left:10%;
+ padding-right:10%;
+  
+
 
 }
+body.indexproduct .product:hover {
+  border: 1px black dotted;
+}
+body.indexproduct .image-index {
+  min-height:280px;
+  max-width : 100%;
+  max-height: 280px;
+  height : auto;
+
+
+}
+body.indexproduct .image-index:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+opacity:0.8;
+transform: translateY(5px);
+}
+
 body.indexproduct p.price {
   float:right;
   text-shadow :0.5px 0.5px black;
@@ -50,28 +92,18 @@ body.indexproduct span.classify{
 }
 body.indexproduct .warning1:hover {
   color:black;}
+body.indexproduct .link1 {
+  
+    color: black;
+    text-decoration: inherit;}
+
 body.indexproduct .edit:hover {
   color:black;
 }
-body.indexproduct .image-index {
-  width : 200px;
-  height : 280px;
-}
-body.indexproduct .image-index:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-opacity:0.8;
-transform: translateY(5px);
-}
+
 @media only screen and (max-width: 1200px) {
   /* For mobile phones: */
-  body.indexproduct .product-index-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin-left:10%;
-    margin-right:10%;
-    padding-left:1%;
-    padding-right:1%;
-  }
+
   }
 
 body.showproduct{
@@ -139,10 +171,13 @@ body.showproduct .show2{
   body.showproduct .image-index {
 
     
-    height: 600px;
+    height: auto;
   max-width:100%; /* zoom khong bi be hinh */
   }
+  body.showproduct .image-show {
 
+    width:150%;
+    height:auto} /* hinh nho */
   body.showproduct .show2{
     height:700px;
   }

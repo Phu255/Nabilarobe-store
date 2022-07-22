@@ -6,7 +6,9 @@ class ProductsController < ApplicationController
     @q = Product.ransack(params[:q])
     @products = @q.result(distinct: true)
    @sanpham = Product.all
-
+  
+   @a = Product.where('classify = "Latest"').ransack(params[:q])
+   @lastest = @a.result(distinct: true)
   
   end
 

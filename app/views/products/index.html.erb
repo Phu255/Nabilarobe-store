@@ -11,8 +11,11 @@
 
 
 <!-- tao product thang hang -->
+<div class="normal" >
+<div class="filter">
+<%= render "products/filter" %>
+</div>
 <div class="product-index-grid ">
-
     <% @products.each do |product| %>
       <div class="product">
       <% if user_signed_in? %>
@@ -33,12 +36,17 @@
     </div>
     <% end %>
 </div>
+</div>
 <br>
-<% @sanpham.where('price >350000').find_each do |a| %>
-  <%= a.title %>
-  <% end %>
- <br>
+
+<br><br>
+
+
+
+ <br><BR>
+
 
 </body>
+<p>s</p>
 
 <%= render "layouts/footer" %>

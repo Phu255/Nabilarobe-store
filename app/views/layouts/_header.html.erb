@@ -41,7 +41,7 @@
       
     
         <input id="find_submit" type="image" <%= image_tag "search.jpg"  ,class:"search rounded-pill" %>
-      <%= find.search_field :title_or_price_or_description_cont , placeholder:"What are you looking for ? (name,color,...)",list:"datalistOptions",class:"search2 form-control",id:"find"%> 
+      <%= find.search_field :title_or_price_or_description_or_classify_cont , placeholder:"What are you looking for ? (name,color,...)",list:"datalistOptions",class:"search2 form-control",id:"find"%> 
     
       <datalist id="datalistOptions">
     
@@ -53,8 +53,7 @@
     </datalist>
 
       <% end %>
-  
-    
+
      
       </nav>
 </header>
