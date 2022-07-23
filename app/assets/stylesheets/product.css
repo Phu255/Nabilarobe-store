@@ -1,7 +1,6 @@
 body.indexproduct{
   background-image: url('background.jpg') ;
   background-size: cover;
-  color:rgb(184, 138, 230);;
   font-family: "Times New Roman", Times, serif;;
   line-height: 15px;
 }
@@ -22,48 +21,74 @@ body.indexproduct h3{
   text-shadow :2px 2px rgb(184, 138, 230) ;
   margin-left :0px;
 }
-body.indexproduct .normal{border: 1px rgb(94, 88, 2) dotted;}
+body.indexproduct .boloc{
+  text-decoration: inherit;
+  font-size: 180%;
+  color:black;
+  text-shadow: 1.5px 1.5px rgb(184, 138, 230);
+}
+body.indexproduct .col1{
+  line-height: 40px;
+  font-size:150%;
+  text-decoration: inherit;
+  color:black;
+}
+body.indexproduct .col1:hover{
+  opacity:0.5;
+}
+body.indexproduct .col2{
+  color:rgb(0, 0, 0);
+}
+body.indexproduct .col2:hover{
+  opacity:0.5;
+}
+body.indexproduct .colorround{
+  height:30px;
+  width:50px;
+}
+body.indexproduct .colorround:hover{
+opacity:0.5;
+}
+body.indexproduct .dropdown-toggle:hover .dropdown-item{
+  display:block;
+}
+body.indexproduct .link1{
+  color:black;
+  text-decoration: inherit;
+}
+body.indexproduct .normal{border: 1px rgb(94, 88, 2) solid;}
 body.indexproduct .normal:after{  /* giu footer luon o duoi day */
     content: "";
     display: table;
     clear: both;}
-body.indexproduct circle{
-  cx="15"; cy="15"; r="15" ; stroke-width="15";
-}
+
 body.indexproduct .filter {
-  width:15%;
+  width:260px;
   float:left;
-  margin-right:5%;  
+
   padding-left :3%;
   border: 1px orange dotted;
 }
 body.indexproduct .product-index-grid {
-  width:80%;
-  float:right;
+  max-width:80%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   border: 1px rgb(255, 6, 6) dotted;
-  padding-right:10%;  
-
+  color:rgb(184, 138, 230) ;
 }
 body.indexproduct .product{
-
  padding-left:10%;
  padding-right:10%;
   
-
-
 }
 body.indexproduct .product:hover {
-  border: 1px black dotted;
+  border: 1px black solid;
 }
 body.indexproduct .image-index {
   min-height:280px;
   max-width : 100%;
   max-height: 280px;
   height : auto;
-
-
 }
 body.indexproduct .image-index:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
@@ -86,25 +111,16 @@ body.indexproduct p.color {
 body.indexproduct p.size{
   font-size:smaller;
 }
-body.indexproduct span.classify{
-
-  color:rgb(0, 0, 0);;
-}
 body.indexproduct .warning1:hover {
-  color:black;}
-body.indexproduct .link1 {
-  
-    color: black;
-    text-decoration: inherit;}
-
+  color:black;
+}
 body.indexproduct .edit:hover {
   color:black;
 }
-
 @media only screen and (max-width: 1200px) {
   /* For mobile phones: */
-
   }
+
 
 body.showproduct{
   color:rgb(184, 138, 230);; 

@@ -33,7 +33,6 @@ header .form-control{
   background-color:white;
   width:330px;
   height:25px;
- 
   margin-right :20px;
 } 
 
@@ -76,9 +75,6 @@ footer .grid-item {
  float: right;
 }
 .search2 {
-
- 
-
 margin-top:13px;
 }
 #find {
@@ -91,5 +87,5 @@ margin-top:13px;
 #find::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color:rgb(184, 138, 230);
   text-shadow :0.5px 0.5px black;
-  opacity: 0.8; /* Firefox */
+  opacity: 0.6; /* Firefox */
 }
