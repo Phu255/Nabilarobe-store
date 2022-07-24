@@ -1,11 +1,10 @@
 
 <title>Nabi La Robe</title>
 
-
-     
 <%= render "layouts/header" %>
 
 <body class="indexhomepage">
+<div class="normal" >
 <h1><%= link_to "NABI LA ROBE", products_path ,class:"title1"%></h1>
 <% @homepages.each do |homepage| %>
   <% if user_signed_in? %>
@@ -93,8 +92,6 @@
 <% end %>
 </div>
 </div>
-
-
 </div>
 
 </body>

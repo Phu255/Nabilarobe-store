@@ -10,7 +10,7 @@ body.indexproduct h1{
   margin-left :0px;
   text-align:center;
   padding-top:12px;
-  padding-bottom:10px;
+
 }
 body.indexproduct h2{
   color:black;
@@ -30,7 +30,7 @@ body.indexproduct .boloc{
 }
 body.indexproduct .col1{
   line-height: 40px;
-  font-size:150%;
+  font-size:120%;
   text-decoration: inherit;
   color:black;
 }
@@ -73,22 +73,22 @@ body.indexproduct .filter {
 body.indexproduct .product-index-grid {
   max-width:80%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-
+  grid-template-columns: repeat(auto-fill, min(290px));
   color:rgb(184, 138, 230) ;
 }
 body.indexproduct .product{
- padding-left:10%;
- padding-right:10%;
+  padding-top:5%;
+ padding-left:6.5%;
+ padding-right:8%;
   
 }
 body.indexproduct .product:hover {
   border: 1px black solid;
 }
 body.indexproduct .image-index {
-  min-height:280px;
-  max-width : 100%;
-  max-height: 280px;
+min-height:340px;
+  width:250px;
+  max-height: 340px;
   height : auto;
 }
 body.indexproduct .image-index:hover {
@@ -99,21 +99,26 @@ transform: translateY(5px);
 
 body.indexproduct p.price {
   float:right;
-  text-shadow :0.5px 0.5px black;
+  color : black;
+  text-shadow :1px 1px rgb(184, 138, 230);
 }
 body.indexproduct p.title {
 color : black;
 text-shadow :1px 1px rgb(184, 138, 230);
 font-size: 20px;
+padding-bottom:2px;
 }
 body.indexproduct p.color {
-  font-size:15px;
+  font-size:17px;
+  text-shadow :0.5px 0.5px black;
 }
 body.indexproduct p.size{
-  font-size:smaller;
+  font-size:16px;
+  text-shadow :0.3px 0.3px black;
 }
 body.indexproduct .warning1:hover {
   color:black;
+ 
 }
 body.indexproduct .edit:hover {
   color:black;
@@ -128,6 +133,7 @@ body.showproduct{
   font-family: "Times New Roman", Times, serif;;
   background-image: url('background.jpg') ;
   background-size: cover;
+  padding-top:10px;
   
 }
 
@@ -156,7 +162,7 @@ body.showproduct .image-index {
   margin-bottom:30px;
   padding-bottom:10px;
   width:650px;
-  height:820px;
+  height:800px;
 max-width:100%; /* zoom khong bi be hinh */
 }
 body.showproduct .carousel-control-prev{
@@ -171,6 +177,10 @@ body.showproduct .flex2 {/* phai co de padding-left :15% = 15% cua trang ,khong 
   padding-left: 10%;
   padding-right: 10%;
   }
+body.showproduct .normal:after{  /* giu footer luon o duoi day */
+    content: "";
+    display: table;
+    clear: both;}
 body.showproduct .show1{
   width:50%;
   float:left;
@@ -186,20 +196,16 @@ body.showproduct .show2{
 @media only screen and (max-width: 1242px) {
   /* For mobile phones: */
   body.showproduct .image-index {
-
-    
     height: auto;
   max-width:100%; /* zoom khong bi be hinh */
   }
   body.showproduct .image-show {
-
     width:150%;
     height:auto} /* hinh nho */
   body.showproduct .show2{
     height:700px;
   }
 }
-
 body.formproduct{
   background-color: rgb(241, 255, 254);
   color:rgb(184, 138, 230);;

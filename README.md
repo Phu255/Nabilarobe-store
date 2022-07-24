@@ -60,7 +60,7 @@
 
 - Online payment
 
-- Choose type of color of product when add it to cart 
+- Choose type of color of product#show when add it to cart 
 
 - Pagination
 
