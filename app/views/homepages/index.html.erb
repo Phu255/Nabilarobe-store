@@ -5,10 +5,8 @@
      
 <%= render "layouts/header" %>
 
-
-
 <body class="indexhomepage">
-<h1>NABI LA ROBE</h1>
+<h1><%= link_to "NABI LA ROBE", products_path ,class:"title1"%></h1>
 <% @homepages.each do |homepage| %>
   <% if user_signed_in? %>
   <%= link_to 'Destroy this Video', homepage, data: { confirm: 'Are you sure?' }, :method => :delete ,class:"warning1" %>
@@ -26,21 +24,27 @@
       <!-- carousel --> 
 
 <div class="flex1">
-<h2>Latest</h2>
+<div>
+<%= search_form_for @q do |find| %>
+  <button id="find_submit" type="submit" class="btn btn-default" ><span class="title2">Latest</span
+   </button>
+ <%= find.hidden_field :classify_cont, value: "Latest" ,class:"form-control",id:"find"%> 
+  <% end %>
+</div>
+
        <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
       <div id="carousel1_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
 
         <div class="carousel-inner">
           <% @latest.each_with_index do |product, index| %>
             <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
-              <%= image_tag product.avatar, class: 'hinhtrangchu' %><br>
+              <%= link_to image_tag(product.avatar, :class => 'hinhtrangchu'),product %><br>
               <div class="carousel-caption"><h4><%=product.title%></h4>
               <h3><%=number_to_currency product.price/20000-0.01%></h3>
               </div>
             </div>
           <% end %>
         </div>
-
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel1_<%= product.id %>" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
@@ -58,13 +62,19 @@
    <!-- carousel --> 
    
    <div class="flex1">
-   <h2>Greastest</h2>
+   <div>
+ <%= search_form_for @q do |find| %>
+    <button id="find_submit" type="submit" class="btn btn-default" ><span class="title2">Greatest</span
+     </button>
+   <%= find.hidden_field :classify_cont, value: "Greatest" ,class:"form-control",id:"find"%> 
+    <% end %>
+  </div>
     <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
    <div id="carousel2_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
      <div class="carousel-inner">
        <% @greatest.each_with_index do |product, index| %>
          <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
-           <%= image_tag product.avatar, class: 'hinhtrangchu' %><br>
+           <%= link_to image_tag(product.avatar, :class => 'hinhtrangchu'),product %><br>
            <div class="carousel-caption"><h4><%=product.title%></h4>
            <h3><%=number_to_currency product.price/20000-0.01%></h3></div>
           

@@ -10,6 +10,7 @@ body.indexproduct h1{
   margin-left :0px;
   text-align:center;
   padding-top:12px;
+  padding-bottom:10px;
 }
 body.indexproduct h2{
   color:black;
@@ -56,7 +57,7 @@ body.indexproduct .link1{
   color:black;
   text-decoration: inherit;
 }
-body.indexproduct .normal{border: 1px rgb(94, 88, 2) solid;}
+
 body.indexproduct .normal:after{  /* giu footer luon o duoi day */
     content: "";
     display: table;
@@ -66,14 +67,14 @@ body.indexproduct .filter {
   width:260px;
   float:left;
 
-  padding-left :3%;
-  border: 1px orange dotted;
+  padding-left :2%;
+
 }
 body.indexproduct .product-index-grid {
   max-width:80%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  border: 1px rgb(255, 6, 6) dotted;
+
   color:rgb(184, 138, 230) ;
 }
 body.indexproduct .product{

@@ -4,15 +4,23 @@ body.indexhomepage{
   background-image: url('background.jpg') ;
   background-size: cover;}
 body.indexhomepage h1{
+  text-align: center;
+  padding-top:17px;
+  padding-bottom:10px;
+}
+body.indexhomepage .title1{
   text-shadow: 3px 3px rgb(184, 138, 230);
   color:black;;
-  text-align: center;
-  padding-top:15px;
+  text-decoration: inherit;
 }
-body.indexhomepage h2{
+body.indexhomepage .title2{
   text-shadow: 2px 2px rgb(184, 138, 230);
   color:black;;
-  text-align: center;}
+  text-decoration: inherit;
+  font-size :30px;
+  text-align: center;
+}
+
 body.indexhomepage h3{
   text-shadow: 1px 1px rgb(184, 138, 230);
   color:black;;}

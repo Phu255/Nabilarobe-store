@@ -42,7 +42,11 @@
 
 - Sort item ( Ransack)
 
-- - Choose images from Product and mark them with many types to make it appear in the Homepage (Active Record Query Interface)
+- Choose images from Product and mark them with many types to make it appear in the Homepage (Active Record Query Interface)
+
+- Filter Product by highest or lowest price 
+
+- Click the item in the Homepage ,it link to Product#show that item
 
 ***` What I need to practice more :
 
@@ -54,8 +58,6 @@
 
 - Learn very clearly about Associations (Rails)
 
-- Click the item in the Homepage ,it link to Product#show that item
-
 - Online payment
 
 - Choose type of color of product when add it to cart 
@@ -64,6 +66,6 @@
 
 - More option :add image to products when edit
 
-- Filter Product by highest or lowest price 
-
 - Create a button that click it and only latest ,greatest products appear
+
+- Create button to next and previous product
