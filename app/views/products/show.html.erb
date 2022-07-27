@@ -55,7 +55,15 @@
 </p>
 <p>
   <strong>Color:</strong>
-  <%= @product.color1 %> / <%= @product.color2 %> / <%= @product.color3 %> / <%= @product.color4 %> / <%= @product.color5 %>
+  <%= @product.color1 %>
+  <% if @product.color2.present? %>
+  /<%= @product.color2 %>
+  <%end%>
+  <% if @product.color3.present? %>
+  /<%= @product.color3 %>
+  <%end%>
+  
+
 </p>
 <p>
   <strong>Classify:</strong>
@@ -66,5 +74,4 @@
 <br>
 
 <%= render "layouts/footer" %>
-
 

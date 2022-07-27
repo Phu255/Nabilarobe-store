@@ -44,7 +44,7 @@
 
 - Choose images from Product and mark them with many types to make it appear in the Homepage (Active Record Query Interface)
 
-- Filter Product by highest or lowest price 
+- Filter Product by highest or lowest price ,create a button that click it and only latest ,greatest products appear
 
 - Click the item in the Homepage ,it link to Product#show that item
 
@@ -65,7 +65,5 @@
 - Pagination
 
 - More option :add image to products when edit
-
-- Create a button that click it and only latest ,greatest products appear
 
 - Create button to next and previous product

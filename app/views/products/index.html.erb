@@ -7,8 +7,8 @@
 <div class="logohomepage">
 
 
-<h1><i class="fa-brands fa-apple"></i>All Nabi Dresses</h1>
 
+<h1><i class="fa-brands fa-apple"></i><%= link_to "All Nabi Dresses", products_path ,class:"title1"%></h1>
 
 <!-- tao product thang hang -->
 <div class="normal" >
@@ -29,10 +29,21 @@
     <% if product.avatar.attached? %>
     <%= link_to image_tag(product.avatar,:class => 'image-index'),product %>
     <%end%>
+    
     <p class="price"><%= number_to_currency product.price/20000-0.01 %>
+   
     <p class="title"><%= product.title %></p>
 
-    <p class="color"><%= product.color1%>/<%= product.color2%>/<%= product.color3%>
+    <p class="color"><%=product.color1%>
+    <% if product.color2.present? %>/<%= product.color2%>
+    <%end%>
+    <% if product.color3.present? %>
+    /<%= product.color3%>
+    <%end%>
+    <% if product.color4.present? %>
+    /<%= product.color4%>
+    <%end%></p>
+ 
     <p class="size"><%= product.size %>   
     </div>
     <% end %>
