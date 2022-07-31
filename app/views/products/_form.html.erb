@@ -11,79 +11,97 @@
       </ul>
     </div>
   <% end %>
-
+<div class="grid">
+  <div class= "form1">
   <div class="field">
     <%= form.label :title %>
     <p>
-    <%= form.text_field :title %>
+    <%= form.text_field :title ,class:"input1"%>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <p>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-  <%= form.label :color1 %>
+  <%= form.label :size %>
   <p>
-  <%= form.text_field :color1 %>
+  <%= form.text_field :size %>
 </div>
+</div>
+
+
+
+<div class="field form2">
+<%= form.label :description %>
+<p>
+<%= form.text_area :description ,class:"description" %>
+</div>
+
+
+
+<div class="form3">
 
 <div class="field">
-<%= form.label :color2 %>
+<%= form.label :avatar %>
 <p>
-<%= form.text_field :color2 %>
-</div>
-
-<div class="field">
-<%= form.label :color3 %>
-<p>
-<%= form.text_field :color3 %>
-</div>
-
-<div class="field">
-<%= form.label :color4 %>
-<p>
-<%= form.text_field :color4 %>
-</div>
-
-<div class="field">
-<%= form.label :color5 %>
-<p>
-<%= form.text_field :color5 %>
-</div>
-
+<%= form.file_field :avatar %>
+</div> 
 <div class="field">
 <%= form.label :classify %>
 <p>
-<%= form.select :classify, ['Greatest', 'Latest', 'None'], selected: 'None' %>
+<%= form.select :classify, ['Greatest', 'Latest', 'None'], selected: 'Latest' %>
+</div>
+</div>
 </div>
 
-  <div class="field">
-    <%= form.label :price %>
-    <p>
-    <%= form.text_field :price %>
+
+
+
+<div class="grid" >
+  <div class="field form1">
+    <%= form.label :color1 %>
+<p>
+    <%= form.text_field :color1 %>
   </div>
 
-  <div class="field">
-    <%= form.label :size %>
-    <p>
-    <%= form.text_field :size %>
-  </div>
+  <div class="field form2">
+  <%= form.label :price1 %>
+ <p>
+  <%= form.text_field :price %>
+</div>
 
-  <div class="field">
-    <%= form.label :avatar %>
-    <p>
-    <%= form.file_field :avatar %>
-  </div>
-
-  <div class="field">
-  <%= form.label :images %>
+  <div class="field form3">
+  <%= form.label :images1 %>
   <p>
   <%= form.file_field :images, multiple: true %>
   </div>
+</div>
+<% @product.images.each do |image| %>
+  <%= image_tag image ,class:"image-form" %>
+  <%end%>
+ 
 
+
+  <div class="grid" >
+  <div class="field form1">
+    <%= form.label :color2 %>
+<p>
+    <%= form.text_field :color2 %>
+  </div>
+
+  <div class="field form2">
+  <%= form.label :price2%>
+ <p>
+  <%= form.text_field :price2 %>
+</div>
+
+  <div class="field form3">
+  <%= form.label :images2 %>
+  <p>
+  <%= form.file_field :images2, multiple: true %>
+  </div>
+</div>
+<% @product.images2.each do |image| %>
+  <%= image_tag image ,class:"image-form" %>
+  <%end%>
+ 
   <div class="action">
     <%= form.submit %>
   </div>

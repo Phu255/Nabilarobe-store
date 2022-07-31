@@ -62,15 +62,18 @@
   <% if @product.color3.present? %>
   /<%= @product.color3 %>
   <%end%>
-  
-
 </p>
+
 <p>
   <strong>Classify:</strong>
   <%= @product.classify %>
 </p>
 </div>
 </div>
+
+<% @product.images2.each do |image| %>
+  <%= image_tag image ,class:"image-index " %>
+  <%end%>
 <br>
 
 <%= render "layouts/footer" %>

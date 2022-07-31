@@ -9,8 +9,9 @@ class ProductsController < ApplicationController
   
    @a = Product.where('classify = "Latest"').ransack(params[:q])
    @lastest = @a.result(distinct: true)
-  
   end
+
+  
 
   # GET /products/1 or /products/1.json
   def show
@@ -77,6 +78,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :description, :price, :size, :avatar, :color1, :color2, :color3, :color4, :color5,:classify, images:[])
+      params.require(:product).permit(:title, :description, :price, :price2, :size, :avatar, :color1, :color2, :color3, :color4, :color5,:classify,  images:[] ,images2:[])
     end
 end

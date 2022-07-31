@@ -31,6 +31,7 @@ body.indexproduct .boloc{
   font-size: 180%;
   color:black;
   text-shadow: 1.5px 1.5px rgb(184, 138, 230);
+  padding-top:10px;
 }
 body.indexproduct .col1{
   line-height: 40px;
@@ -210,10 +211,39 @@ body.showproduct .show2{
     height:700px;
   }
 }
+
 body.formproduct{
   background-color: rgb(241, 255, 254);
   color:rgb(184, 138, 230);;
   margin: 30px; 
   font-family: "Times New Roman", Times, serif;;
   line-height: 15px;
+}
+body.formproduct .image-form {
+  min-height:340px;
+    width:250px;
+    max-height: 340px;
+    height : auto;
+  margin-bottom:30px;
+  }
+body.formproduct .input1{
+  width:220px;
+}
+body.formproduct .grid{
+  display:grid;
+  grid-template-columns: 30% 30% 40%;
+
+}
+body.formproduct .form1{
+
+}
+body.formproduct .form2{
+
+}
+body.formproduct .form3{
+
+}
+body.formproduct .description{
+  width:250px;
+  height:70px;
 }
