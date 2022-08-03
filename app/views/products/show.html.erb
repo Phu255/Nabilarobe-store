@@ -1,41 +1,72 @@
 <%= render "layouts/header" %>
 <body class="showproduct">
 <div class="normal">
-<div class="show1">
-  <div class="flex2"
-   <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
-  <div id="carousel_<%= product.id %>" class="carousel slide" data-bs-ride="carousel" >
+  <div class="show1" id="parent">
+    <div class="flex2 collapse show" id="collapse1" data-bs-parent="#parent">
+      <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
+        <div id="carousel_<%= product.id=1 %>" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
 
-<!-- Indicators/dots -->
-<div class="carousel-indicators">
-  <% @product.images.each_with_index do |image, index| %>
-  <button type="hover" data-bs-target="#carousel_<%= product.id %>"  data-bs-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %> nut ">
-      <%= image_tag image ,class:'image-show d-block ' %><br>
-  </button>
-  <%end%>
-</div>
-<!-- carousel -->
-    <div class="carousel-inner">
-    <% @product.images.each_with_index do |image, index| %>
-        <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
-          <%= image_tag image, class: 'image-index' %><br>
+          <div class="carousel-indicators">         <!-- Indicators/dots -->
+            <% @product.images.each_with_index do |image, index| %>
+              <button data-bs-target="#carousel_<%= product.id=1 %>"  data-bs-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %> nut ">
+              <%= image_tag image ,class:'image-show d-block ' %><br>
+              </button>
+            <%end%>
+          </div>
+
+          <div class="carousel-inner">          <!-- carousel -->
+            <% @product.images.each_with_index do |image, index| %>
+              <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
+                <%= image_tag image, class: 'image-index' %><br>
+              </div>
+            <%end%>
+          </div>
+                                        <!-- button -->
+          <button class="carousel-control-prev" data-bs-target="#carousel_<%= product.id=1 %>" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= product.id=1 %>" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-  <%end%>
-  </div>
+      <% end %>
+    </div>
+  
 
-<!-- button -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_<%= product.id %>" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= product.id %>" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <div class="flex2 collapse" id="collapse2" data-bs-parent="#parent">
+      <% @products.take(1).each do |product| %> <!--##dung take(1) hoac slice(1,1)-->
+        <div id="carousel_<%= product.id=2 %>" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="false">
+
+          <div class="carousel-indicators">         <!-- Indicators/dots -->
+            <% @product.images2.each_with_index do |image, index| %>
+              <button data-bs-target="#carousel_<%= product.id=2 %>"  data-bs-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %> nut ">
+              <%= image_tag image ,class:'image-show d-block ' %><br>
+              </button>
+            <%end%>
+          </div>
+
+          <div class="carousel-inner">          <!-- carousel -->
+            <% @product.images2.each_with_index do |image, index| %>
+              <div id="carousel_item_<%= index %>" class="carousel-item <%= index == 0 ? 'active' : '' %>">
+                <%= image_tag image, class: 'image-index' %><br>
+              </div>
+            <%end%>
+          </div>
+                                        <!-- button -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel_<%= product.id=2 %>" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel_<%= product.id=2 %>" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
-</div>
-</div>
 
   <div class="show2">
   <h1>
@@ -47,34 +78,42 @@
 </p>
 <p>
   <strong>Price:</strong>
-  <%= number_to_currency @product.price/20000-0.01 %>
+  <%= number_to_currency @product.price/20000-0.01 ,id:"collapse1"%>
+  <% if @product.price2.present? %>
+  /<%= number_to_currency @product.price2/20000-0.01 ,id:"collapse2"%>
+  <%end%>
 </p>
 <p>
   <strong>Size:</strong>
   <%= @product.size %>
 </p>
 <p>
-  <strong>Color:</strong>
-  <%= @product.color1 %>
+<strong>Color:</strong>
+<br>
+  <a class="col1" data-bs-toggle="collapse" href="#collapse1">
+  <% @product.images.take(1).each do |image| %>
+    <%= image_tag image ,class:"image-color",id:"color1" %>
+    <%end%>
+  </a>
   <% if @product.color2.present? %>
-  /<%= @product.color2 %>
+  <a class="col1" data-bs-toggle="collapse" href="#collapse2" >
+  <% @product.images2.take(1).each do |image| %>
+    <%= image_tag image ,class:"image-color",id:"color2" %>
+    <%end%>
+  </a>
   <%end%>
   <% if @product.color3.present? %>
   /<%= @product.color3 %>
   <%end%>
 </p>
 
-<p>
-  <strong>Classify:</strong>
-  <%= @product.classify %>
-</p>
+
 </div>
 </div>
 
-<% @product.images2.each do |image| %>
-  <%= image_tag image ,class:"image-index " %>
-  <%end%>
-<br>
+
+
+
 
 <%= render "layouts/footer" %>
 
