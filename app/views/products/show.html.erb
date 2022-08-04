@@ -72,18 +72,7 @@
   <h1>
   <%= @product.title %>
   </h1>
-<p class="description">
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p class="size">
-  <strong>Size:</strong>
-  <%= @product.size %>
-</p>
-
-<p> 
-<strong>Price:</strong>
+  <p id="price"> 
 <span id="price1">
 <%= number_to_currency @product.price/20000-0.01 %>
 </span>
@@ -92,17 +81,25 @@
 <%= number_to_currency @product.price2/20000-0.01 %>
 </span>
 <%end%>
+ -  <span class="strong"><%= @product.size %></span>
+
+</p>
+<p class="description">
+  <%= @product.description %>
 </p>
 
+
+
+
 <% if @product.color2.present? %>
-<strong>Color:</strong>
+<span class="strong">Select color:</span>
 <br><br>
-  <a onclick="x()" class="col1" >
+  <a onclick="x()">
   <% @product.images.take(1).each do |image| %>
     <%= image_tag image ,class:"image-color"%>
     <%end%>
   </a>
-  <a onclick="y()" class="col1" >
+  <a onclick="y()">
   <% @product.images2.take(1).each do |image| %>
     <%= image_tag image ,class:"image-color" %>
     <%end%>

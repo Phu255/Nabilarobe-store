@@ -116,14 +116,12 @@ body.indexproduct p.color {
   font-size:17px;
   text-shadow :0.5px 0.5px black;
 }
-
 body.indexproduct p.size{
   font-size:16px;
   text-shadow :0.3px 0.3px black;
 }
 body.indexproduct .warning1:hover {
   color:black;
- 
 }
 body.indexproduct .edit:hover {
   color:black;
@@ -134,24 +132,33 @@ body.indexproduct .edit:hover {
 
 
 body.showproduct{
-  color:rgb(126, 69, 182);; 
+  color:black;
   font-family: "Times New Roman", Times, serif;;
   background-image: url('background.jpg') ;
   background-size: cover;
   padding-top:10px;
 }
+body.showproduct .strong{
+  color:black;
+  text-shadow :1px 1px rgb(184, 138, 230);
+
+}
 body.showproduct h1{
   color:black;
   text-shadow :2px 2px rgb(184, 138, 230);
   padding-top:50px;
-}
-body.showproduct strong{
-
 
 }
 body.showproduct .description{
- margin-top:15px;
+color:rgb(169, 126, 212);
+ margin-bottom:20px;
 }
+body.showproduct #price{
+
+color:black;
+text-shadow :1px 1px rgb(184, 138, 230);
+font-size:18px;
+ }
 body.showproduct .image-show {
 width:210%;
 height:80px;
@@ -211,7 +218,7 @@ body.showproduct .show1{
 body.showproduct .show2{
   width:50%;
   float:left;
- height:900px;
+  padding-right:500px;;
 }
 @media only screen and (max-width: 1242px) {
   /* For mobile phones: */
