@@ -134,7 +134,7 @@ body.indexproduct .edit:hover {
 
 
 body.showproduct{
-  color:rgb(184, 138, 230);; 
+  color:rgb(126, 69, 182);; 
   font-family: "Times New Roman", Times, serif;;
   background-image: url('background.jpg') ;
   background-size: cover;
@@ -145,9 +145,17 @@ body.showproduct h1{
   text-shadow :2px 2px rgb(184, 138, 230);
   padding-top:50px;
 }
+body.showproduct strong{
+
+
+}
+body.showproduct .description{
+ margin-top:15px;
+}
 body.showproduct .image-show {
 width:210%;
 height:80px;
+
 } /* hinh nho */
 body.showproduct .image-color{
   width:90px;
@@ -199,7 +207,6 @@ body.showproduct .show1{
   float:left;
   padding-bottom: 50px;;
   padding-left:200px;;
- 
 }
 body.showproduct .show2{
   width:50%;
@@ -240,16 +247,6 @@ body.formproduct .input1{
 body.formproduct .grid{
   display:grid;
   grid-template-columns: 30% 30% 40%;
-
-}
-body.formproduct .form1{
-
-}
-body.formproduct .form2{
-
-}
-body.formproduct .form3{
-
 }
 body.formproduct .description{
   width:250px;

@@ -38,6 +38,7 @@ header .form-control{
 footer {
   background-color: black;
 padding-bottom:10px;
+margin-top:10px;
 }
 div .editfooter{
   margin:0px;

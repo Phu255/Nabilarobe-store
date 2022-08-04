@@ -48,6 +48,8 @@
 
 - Click the item in the Homepage ,it link to Product#show that item
 
+- Choose type of color of product#show when add it to cart (add more option style of product color,images,price by JS)
+
 ***` What I need to practice more :
 
 - Upload app to Heroku (Ubuntu ,NodeJs problem but still can't fix ) 
@@ -59,8 +61,6 @@
 - Learn very clearly about Associations (Rails)
 
 - Online payment
-
-- Choose type of color of product#show when add it to cart 
 
 - Pagination
 
